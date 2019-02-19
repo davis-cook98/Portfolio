@@ -5,7 +5,6 @@ import Helmet from 'react-helmet';
 import { Box, Flex, Heading, Provider as RebassProvider, Text } from 'rebass';
 import { injectGlobal } from 'styled-components';
 import Footer from './Footer';
-import Header from './Header';
 
 injectGlobal`
   body {
@@ -37,14 +36,12 @@ const Layout = ({ children }) => (
       )}
     />
 
-    <Header brand={<Heading>Gatsby</Heading>} />
-
     <Box is="main" flex={1}>
       {children}
     </Box>
 
     <Footer>
-      <Text align="center">Sticky footer</Text>
+      <Text align="center">connect with me</Text>
     </Footer>
   </RebassProvider>
 );
