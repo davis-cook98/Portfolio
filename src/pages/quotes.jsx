@@ -13,7 +13,13 @@ const Quotes = () => (
     quotes that I like
     </Typography>
     <Typography variant="h6" align="center" color="textSecondary" paragraph>
-    
+    “Simplicity is the ultimate sophistication.” —Leonardo da Vinci
+    </Typography>
+    <Typography variant="h6" align="center" color="textSecondary" paragraph>
+    "I intend to live life, not just exist." -George Takei
+    </Typography>
+    <Typography variant="h6" align="center" color="textSecondary" paragraph>
+    “In the middle of every difficulty lies opportunity.” —Albert Einstein
     </Typography>
     </Container>
   </Layout>

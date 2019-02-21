@@ -41,7 +41,9 @@ const Layout = ({ children }) => (
     </Box>
 
     <Footer>
-      <Text align="center">connect with me</Text>
+      <Text align="center">
+      connect with me
+      </Text>
     </Footer>
   </RebassProvider>
 );

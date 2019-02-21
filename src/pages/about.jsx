@@ -9,14 +9,22 @@ import { withStyles } from '@material-ui/core/styles';
 const About = () => (
   <Layout>
     <Container>
-      <Heading my={3}>hi, my name is davis</Heading>
-      <Text is="p">I am a Junior year Computer Science student at Seton Hall
-       University</Text>
-      <Text is="p" my={3}>
-        <Link is={GatsbyLink} to="/">
-          Go back to the homepage
-        </Link>
-      </Text>
+    <Typography component="h1" variant="h4" align="absolute" color="textPrimary" gutterBottom>
+    davis cook
+    </Typography>
+    <Typography variant="h6" align="center" color="textSecondary" paragraph>
+    I am a Junior year Computer Science student studying at Seton Hall University.
+    I am currently pursuing undergraduate research in the fields of text analysis
+    and automated programming. I also work in the Office of Undergraduate Admissions
+    as an Academic Ambassador, where I am responsible for outreach to high school
+    students interested in Computer Science.
+    </Typography>
+    <Typography variant="h6" align="center" color="textSecondary" paragraph>
+    In my free time I like to rock climb and go for runs. I really like these
+    activities because they allow me to get exercise while being able to spend
+    time with friends and family. I think that people put too little emphasis
+    on their personal relationships, and I do not want to fall into that hole.
+    </Typography>
     </Container>
   </Layout>
 );

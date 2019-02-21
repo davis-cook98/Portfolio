@@ -46,7 +46,7 @@ function Album(props) {
               davis cook
             </Typography>
             <Typography variant="h6" align="center" color="textSecondary" paragraph>
-            this is my website
+            a student at seton hall interested in data analysis
             </Typography>
             <Typography variant="h6" align="center" color="textSecondary" paragraph>
             <Link is={GatsbyLink} to="/about/">
