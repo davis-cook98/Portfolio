@@ -1,6 +1,6 @@
 import { Link as GatsbyLink } from 'gatsby';
 import React from 'react';
-import { Link } from 'rebass';
+import { Container, Heading, Link, Text } from 'rebass';
 import Layout from '../components/Layout';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
