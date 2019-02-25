@@ -13,17 +13,17 @@ const About = () => (
     davis cook
     </Typography>
     <Typography variant="h6" align="center" color="textSecondary" paragraph>
-    I am a Junior year Computer Science student studying at Seton Hall University.
-    I am currently pursuing undergraduate research in the fields of text analysis
-    and automated programming. I also work in the Office of Undergraduate Admissions
-    as an Academic Ambassador, where I am responsible for outreach to high school
-    students interested in Computer Science.
+    i am a junior year computer science student studying at seton hall university.
+    i am currently pursuing undergraduate research in the fields of text analysis
+    and automated programming. i also work in the office of undergraduate admissions
+    as an academic ambassador, where i am responsible for outreach to high school
+    students interested in computer science.
     </Typography>
     <Typography variant="h6" align="center" color="textSecondary" paragraph>
-    In my free time I like to rock climb and go for runs. I really like these
+    in my free time i like to rock climb and go for runs. i really like these
     activities because they allow me to get exercise while being able to spend
-    time with friends and family. I think that people put too little emphasis
-    on their personal relationships, and I do not want to fall into that hole.
+    time with friends and family. i think that people put too little emphasis
+    on their personal relationships, and i do not want to fall into that hole.
     </Typography>
     </Container>
   </Layout>

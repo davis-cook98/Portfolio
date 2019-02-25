@@ -21,6 +21,9 @@ const Quotes = () => (
     <Typography variant="h6" align="center" color="textSecondary" paragraph>
     “In the middle of every difficulty lies opportunity.” —Albert Einstein
     </Typography>
+    <Typography variant="h6" align="center" color="textSecondary" paragraph>
+    “Design is not just what it looks like and feels like. Design is how it works.” —Steve Jobs
+    </Typography>
     </Container>
   </Layout>
 );
