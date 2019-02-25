@@ -57,10 +57,6 @@ function Album(props) {
               projects
             </Link>
             -
-            <Link is={GatsbyLink} to="/inspiration/">
-              inspiration
-            </Link>
-            -
             <Link is={GatsbyLink} to="/quotes/">
               quotes
             </Link>

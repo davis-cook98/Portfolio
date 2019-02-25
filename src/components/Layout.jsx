@@ -1,4 +1,4 @@
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, StaticQuery, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
@@ -44,7 +44,9 @@ const Layout = ({ children }) => (
     </Box>
 
     <Footer>
-    connect with me
+    <a href={"https://www.linkedin.com/in/davis-cook/"}>{"connect with me "}</a>
+    -
+    <Link to="/"> back to home</Link>
     </Footer>
   </RebassProvider>
 );
