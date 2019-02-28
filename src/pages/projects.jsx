@@ -10,13 +10,13 @@ const Projects = () => (
   <Layout>
     <Container>
     <Typography component="h1" variant="h4" align="absolute" color="textPrimary" gutterBottom>
-    projects i am working on:
+    projects:
     </Typography>
     <Typography variant="h4" align="absolute" color="textPrimary" paragraph>
     school:
     </Typography>
     <Typography variant="h5" align="absolute" color="textPrimary" paragraph>
-    automated programming
+    automated programming (ongoing)
     </Typography>
     <Typography variant="h6" align="absolute" color="textSecondary" paragraph>
     the goal of this project is to simplify the scripting to function process.
@@ -25,7 +25,7 @@ const Projects = () => (
     </Typography>
 
     <Typography variant="h5" align="absolute" color="textPrimary" paragraph>
-    text analysis
+    text analysis (ongoing)
     </Typography>
     <Typography variant="h6" align="absolute" color="textSecondary" paragraph>
     the goal of this project is to run sentiment analysis about charter schools.
@@ -37,7 +37,8 @@ const Projects = () => (
     personal:
     </Typography>
     <Typography variant="h5" align="absolute" color="textPrimary" paragraph>
-    this website
+    <a href={"https://github.com/davis-cook98/Portfolio"}>{"this website"}</a>
+    (ongoing)
     </Typography>
     <Typography variant="h6" align="absolute" color="textSecondary" paragraph>
     this website is a work in progress. the aim is to update this as new techniques
@@ -45,7 +46,8 @@ const Projects = () => (
     </Typography>
 
     <Typography variant="h5" align="absolute" color="textPrimary" paragraph>
-    twitter sentiment
+    <a href={"https://github.com/davis-cook98/TwitterAnalysis"}>{"twitter analysis"}</a>
+    (on hold)
     </Typography>
     <Typography variant="h6" align="absolute" color="textSecondary" paragraph>
     this project is my sentiment analysis done on the twitter stream. this project
@@ -53,7 +55,8 @@ const Projects = () => (
     </Typography>
 
     <Typography variant="h5" align="absolute" color="textPrimary" paragraph>
-    small projects
+    <a href={"https://github.com/davis-cook98/Personal-Work"}>{"small projects"}</a>
+    (finished)
     </Typography>
     <Typography variant="h6" align="absolute" color="textSecondary" paragraph>
     contained in this folder are small projects that I took on to learn a new

@@ -13,6 +13,7 @@ injectGlobal`
   body {
     margin: 0;
     text-size-adjust: 100%;
+    padding-bottom: 30px;
   }
 `;
 
@@ -44,10 +45,15 @@ const Layout = ({ children }) => (
     </Box>
 
     <Footer>
-    <a href={"https://www.linkedin.com/in/davis-cook/"}>{"connect with me "}</a>
+    <a href={"https://www.linkedin.com/in/davis-cook/"}>{"linkedin"}</a>
     -
-    <Link to="/"> back to home</Link>
+    <a href={"https://github.com/davis-cook98"}>{"github"}</a>
+    -
+    <Link to="/">home</Link>
     </Footer>
+
+
+
   </RebassProvider>
 );
 
