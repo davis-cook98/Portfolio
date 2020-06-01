@@ -1,12 +1,8 @@
 import { Link as GatsbyLink } from 'gatsby';
 import React from 'react';
-import { Container, Heading, Link, Text } from 'rebass';
+import { Container, Link} from 'rebass';
 import Layout from '../components/Layout';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
 
 const Index = () => (
