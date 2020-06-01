@@ -5,9 +5,6 @@ import Helmet from 'react-helmet';
 import { Box, Flex, Heading, Provider as RebassProvider, Text } from 'rebass';
 import { injectGlobal } from 'styled-components';
 import Footer from './Footer';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
 
 injectGlobal`
   body {

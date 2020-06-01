@@ -3,5 +3,5 @@ module.exports = {
     title: "davis cook's page",
     language: 'en',
   },
-  plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-styled-components'],
+  plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-styled-components', 'babel-plugin-styled-components'],
 };
