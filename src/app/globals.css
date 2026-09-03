@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import "drawably/style.css";
+
+:root {
+  --paper: #e3e3e1;
+  --ink: #18181b;
+  --muted: #474645;
+  --pen: #2724d1;
+  --drawably-stroke: #2724d1;
+  --drawably-fill: #2724d1;
+  --drawably-paper: #e3e3e1;
+}
+
+@theme inline {
+  --color-paper: #e3e3e1;
+  --color-ink: #18181b;
+  --color-muted: #474645;
+  --color-pen: #2724d1;
+  --font-sans: "Inter", "Inter Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+}
+
+html {
+  background: var(--paper);
+}
+
+body {
+  background-color: var(--paper);
+  background-image: radial-gradient(rgba(24, 24, 27, 0.035) 0.6px, transparent 0.6px);
+  background-size: 4px 4px;
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
