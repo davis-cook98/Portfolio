@@ -10,7 +10,7 @@ import { RouteButton } from "@/components/sketch-link";
 
 export function HomeView() {
   return (
-    <div className="flex flex-1 flex-col pt-8 pb-16 lg:pt-20 lg:pb-24">
+    <div className="flex flex-col pt-6 pb-4 lg:flex-1 lg:pt-20 lg:pb-24">
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
         <div className="flex flex-col gap-5">
           <p>
