@@ -12,8 +12,8 @@ import { RouteButton, TextMark } from "@/components/sketch-link";
 
 export function AboutView() {
   return (
-    <div className="flex flex-col gap-8 py-4">
-      <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+    <div className="flex flex-col gap-10 py-4 lg:gap-12">
+      <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
         about
       </h1>
 
@@ -38,42 +38,46 @@ export function AboutView() {
         </p>
       </DrawablyCard>
 
-      <div className="flex flex-col gap-4">
-        <h2 className="text-xl font-semibold tracking-tight">experience</h2>
-        <div className="flex flex-col gap-5">
-          {experience.map((job) => (
-            <DrawablyCard key={`${job.company}-${job.title}`} className="flex flex-col gap-3">
-              <div className="flex flex-wrap items-center justify-between gap-3">
-                <h3 className="text-lg font-semibold tracking-tight">
-                  {job.title}
-                </h3>
-                {job.current ? (
-                  <DrawablyBadge variant="scribble">current</DrawablyBadge>
-                ) : null}
-              </div>
-              <p className="font-mono text-sm text-muted">
-                {job.href ? (
-                  <TextMark href={job.href}>{job.company}</TextMark>
-                ) : (
-                  job.company
-                )}
-              </p>
-              <p className="leading-7 text-muted">{job.description}</p>
-            </DrawablyCard>
-          ))}
+      <div className="grid gap-10 lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-14">
+        <div className="flex flex-col gap-8">
+          <DrawablyList marker="check" className="text-base leading-8">
+            {facts.map((fact) => (
+              <li key={fact}>{fact}</li>
+            ))}
+          </DrawablyList>
+          <div>
+            <RouteButton href={`mailto:${site.email}`} variant="solid">
+              email me
+            </RouteButton>
+          </div>
         </div>
-      </div>
 
-      <DrawablyList marker="check" className="text-base leading-8">
-        {facts.map((fact) => (
-          <li key={fact}>{fact}</li>
-        ))}
-      </DrawablyList>
-
-      <div>
-        <RouteButton href={`mailto:${site.email}`} variant="solid">
-          email me
-        </RouteButton>
+        <div className="flex flex-col gap-4">
+          <h2 className="text-xl font-semibold tracking-tight">experience</h2>
+          <div className="grid gap-5 sm:grid-cols-2">
+            {experience.map((job) => (
+              <DrawablyCard
+                key={`${job.company}-${job.title}`}
+                className="flex flex-col gap-3"
+              >
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <h3 className="text-lg font-semibold tracking-tight">
+                    {job.title}
+                  </h3>
+                  {job.current ? <DrawablyBadge>current</DrawablyBadge> : null}
+                </div>
+                <p className="font-mono text-sm text-muted">
+                  {job.href ? (
+                    <TextMark href={job.href}>{job.company}</TextMark>
+                  ) : (
+                    job.company
+                  )}
+                </p>
+                <p className="leading-7 text-muted">{job.description}</p>
+              </DrawablyCard>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,8 +1,6 @@
 "use client";
 
-import { useRef } from "react";
 import {
-  DrawablyArrow,
   DrawablyBadge,
   DrawablyCircle,
   DrawablyHighlight,
@@ -11,38 +9,32 @@ import {
 import { RouteButton } from "@/components/sketch-link";
 
 export function HomeView() {
-  const noteRef = useRef<HTMLParagraphElement>(null);
-  const aboutRef = useRef<HTMLSpanElement>(null);
-
   return (
-    <div className="flex flex-1 flex-col justify-center gap-10 py-10">
-      <div className="flex flex-col gap-5">
-        <p>
-          <DrawablyBadge>hello</DrawablyBadge>
-        </p>
-        <h1 className="max-w-xl text-5xl font-semibold tracking-tight sm:text-7xl">
-          davis <DrawablyCircle>cook</DrawablyCircle>
-        </h1>
-        <p ref={noteRef} className="max-w-md text-lg leading-8 text-muted">
-          web developer at judi health. interested in{" "}
-          <DrawablyHighlight>data analysis</DrawablyHighlight> and{" "}
-          <DrawablyUnderline>machine learning</DrawablyUnderline>.
-        </p>
+    <div className="flex flex-1 flex-col pt-8 pb-16 lg:pt-20 lg:pb-24">
+      <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
+        <div className="flex flex-col gap-5">
+          <p>
+            <DrawablyBadge>hello</DrawablyBadge>
+          </p>
+          <h1 className="text-5xl font-semibold tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl">
+            davis <DrawablyCircle>cook</DrawablyCircle>
+          </h1>
+        </div>
+        <div className="flex flex-col gap-8">
+          <p className="text-lg leading-8 text-muted lg:text-xl lg:leading-9">
+            web developer at judi health. interested in{" "}
+            <DrawablyHighlight>data analysis</DrawablyHighlight> and{" "}
+            <DrawablyUnderline>machine learning</DrawablyUnderline>.
+          </p>
+          <div className="flex flex-wrap items-center gap-3">
+            <RouteButton href="/about" variant="solid">
+              about
+            </RouteButton>
+            <RouteButton href="/projects">projects</RouteButton>
+            <RouteButton href="/quotes">quotes</RouteButton>
+          </div>
+        </div>
       </div>
-
-      <div className="flex flex-wrap items-center gap-3">
-        <span ref={aboutRef}>
-          <RouteButton href="/about" variant="solid">
-            about
-          </RouteButton>
-        </span>
-        <RouteButton href="/projects">projects</RouteButton>
-        <RouteButton href="/quotes" variant="scribble">
-          quotes
-        </RouteButton>
-      </div>
-
-      <DrawablyArrow from={noteRef} to={aboutRef} />
     </div>
   );
 }
