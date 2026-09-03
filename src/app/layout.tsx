@@ -41,6 +41,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${inter.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className={`${inter.className} flex min-h-full flex-col font-sans`}>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var c=localStorage.getItem("outline-color");if(c&&/^#[0-9a-fA-F]{6}$/.test(c)){var r=document.documentElement;r.style.setProperty("--drawably-stroke",c);r.style.setProperty("--drawably-fill",c);r.style.setProperty("--drawably-ink",c);r.style.setProperty("--pen",c)}}catch(e){}`,
+          }}
+        />
         <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
