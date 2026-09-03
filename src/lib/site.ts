@@ -23,32 +23,26 @@ export const experience = [
     title: "web developer",
     company: "judi health",
     href: "https://www.judi.health/",
+    dates: "dec 2025 – present",
     current: true,
+  },
+  {
+    title: "web developer",
+    company: "pharmacy investigators",
+    href: "https://piconsulting.org/",
+    dates: "jul 2022 – dec 2025",
+    current: false,
     description:
-      "building software for unified health benefit administration — pharmacy, medical, vision, and dental.",
+      "supported .net and react + flask apps, worked with end users on improvements, and managed the company's aws infrastructure.",
   },
   {
     title: "intermediate applications developer",
     company: "ups",
     href: null,
-    current: false,
-    description: "applications development on air, fleet, and freight systems.",
-  },
-  {
-    title: "application developer",
-    company: "ups",
-    href: null,
+    dates: "jul 2019 – jul 2022",
     current: false,
     description:
-      "started here after graduating, writing and shipping internal applications.",
-  },
-  {
-    title: "academic ambassador",
-    company: "seton hall university",
-    href: null,
-    current: false,
-    description:
-      "outreach to high school students interested in computer science.",
+      "agile team worked on an etl pipeline for package data, delivered to external customers. started as a software engineer co-op.",
   },
 ] as const;
 

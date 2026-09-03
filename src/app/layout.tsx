@@ -38,12 +38,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${bricolage.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans">
         <script
           dangerouslySetInnerHTML={{
-            __html: `try{var c=localStorage.getItem("outline-color");if(c&&/^#[0-9a-fA-F]{6}$/.test(c)){var r=document.documentElement;r.style.setProperty("--drawably-stroke",c);r.style.setProperty("--drawably-fill",c);r.style.setProperty("--drawably-ink",c);r.style.setProperty("--pen",c)}}catch(e){}`,
+            __html: `try{var c=localStorage.getItem("outline-color");if(c&&/^#[0-9a-fA-F]{6}$/.test(c)){var r=document.documentElement,n=c.toLowerCase()==="#ece6da";r.style.setProperty("--drawably-stroke",c);r.style.setProperty("--drawably-fill",c);r.style.setProperty("--drawably-ink",c);r.style.setProperty("--pen",c);if(n){r.style.setProperty("--paper","#1a1a18");r.style.setProperty("--ink","#ece6da");r.style.setProperty("--muted","#9b9892");r.style.setProperty("--drawably-paper","#1a1a18");r.style.colorScheme="dark"}}}catch(e){}`,
           }}
         />
         <SiteChrome>{children}</SiteChrome>

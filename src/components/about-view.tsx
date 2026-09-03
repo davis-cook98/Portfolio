@@ -54,29 +54,32 @@ export function AboutView() {
 
         <div className="flex flex-col gap-4">
           <h2 className="text-xl font-semibold tracking-tight">experience</h2>
-          <div className="grid gap-5 sm:grid-cols-2">
+          <DrawablyCard className="flex flex-col gap-8">
             {experience.map((job) => (
-              <DrawablyCard
+              <div
                 key={`${job.company}-${job.title}`}
-                className="flex flex-col gap-3"
+                className="flex flex-col gap-2"
               >
-                <div className="flex flex-wrap items-center justify-between gap-3">
+                <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                   <h3 className="text-lg font-semibold tracking-tight">
                     {job.title}
                   </h3>
-                  {job.current ? <DrawablyBadge>current</DrawablyBadge> : null}
+                  <p className="font-mono text-sm text-muted">{job.dates}</p>
                 </div>
-                <p className="font-mono text-sm text-muted">
+                <p className="flex flex-wrap items-center gap-2 font-mono text-sm text-muted">
                   {job.href ? (
                     <TextMark href={job.href}>{job.company}</TextMark>
                   ) : (
                     job.company
                   )}
+                  {job.current ? <DrawablyBadge>current</DrawablyBadge> : null}
                 </p>
-                <p className="leading-7 text-muted">{job.description}</p>
-              </DrawablyCard>
+                {"description" in job ? (
+                  <p className="leading-7 text-muted">{job.description}</p>
+                ) : null}
+              </div>
             ))}
-          </div>
+          </DrawablyCard>
         </div>
       </div>
     </div>

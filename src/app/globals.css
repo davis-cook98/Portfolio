@@ -1,6 +1,54 @@
 @import "tailwindcss";
 @import "drawably/style.css";
 
+@property --paper {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #e3e3e1;
+}
+
+@property --ink {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #18181b;
+}
+
+@property --muted {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #474645;
+}
+
+@property --pen {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #2724d1;
+}
+
+@property --drawably-stroke {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #2724d1;
+}
+
+@property --drawably-fill {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #2724d1;
+}
+
+@property --drawably-ink {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #2724d1;
+}
+
+@property --drawably-paper {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #e3e3e1;
+}
+
 :root {
   --paper: #e3e3e1;
   --ink: #18181b;
@@ -12,10 +60,10 @@
 }
 
 @theme inline {
-  --color-paper: #e3e3e1;
-  --color-ink: #18181b;
-  --color-muted: #474645;
-  --color-pen: #2724d1;
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-pen: var(--pen);
   --font-sans: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
@@ -24,9 +72,43 @@ html {
   background: var(--paper);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    transition:
+      --paper 700ms ease,
+      --ink 700ms ease,
+      --muted 700ms ease,
+      --pen 700ms ease;
+  }
+
+  body {
+    transition:
+      color 700ms ease,
+      background-color 700ms ease;
+  }
+
+  .drawably-button,
+  .drawably-badge {
+    transition:
+      color 700ms ease,
+      transform 120ms ease;
+  }
+
+  .drawably-svg path,
+  .drawably-button .drawably-outline {
+    transition:
+      stroke 700ms ease,
+      fill 700ms ease,
+      stroke-width 120ms ease;
+  }
+}
+
 body {
   background-color: var(--paper);
-  background-image: radial-gradient(rgba(24, 24, 27, 0.035) 0.6px, transparent 0.6px);
+  background-image: radial-gradient(
+    color-mix(in srgb, var(--ink) 6%, transparent) 0.6px,
+    transparent 0.6px
+  );
   background-size: 4px 4px;
   color: var(--ink);
 }
