@@ -136,12 +136,12 @@ export function OutlineColorPicker() {
       </DrawablyButton>
 
       {open ? (
-        <div className="absolute top-full right-0 z-20 mt-3 w-56">
+        <div className="absolute top-full right-0 z-50 mt-3 w-56">
           <DrawablyCard
             id={panelId}
             role="dialog"
             aria-label="outline inks"
-            className="flex flex-col gap-3"
+            className="ink-menu flex flex-col gap-3"
           >
             <p className="font-mono text-xs text-muted">pick an ink</p>
             <div className="grid grid-cols-2 gap-x-4 gap-y-2">
