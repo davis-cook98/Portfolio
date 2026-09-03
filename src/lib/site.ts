@@ -1,14 +1,14 @@
 export const site = {
   name: "davis cook",
   shortName: "dc",
-  role: "intermediate applications developer",
+  role: "web developer",
   location: "new jersey",
-  company: "ups",
+  company: "judi health",
   email: "daviscook@outlook.com",
   linkedin: "https://www.linkedin.com/in/davis-cook/",
   github: "https://github.com/davis-cook98",
   description:
-    "applications developer in new jersey. data analysis, systems, and machine learning.",
+    "web developer at judi health. data analysis, systems, and machine learning.",
 } as const;
 
 export const nav = [
@@ -18,10 +18,44 @@ export const nav = [
   { href: "/quotes", label: "quotes" },
 ] as const;
 
+export const experience = [
+  {
+    title: "web developer",
+    company: "judi health",
+    href: "https://www.judi.health/",
+    current: true,
+    description:
+      "building software for unified health benefit administration — pharmacy, medical, vision, and dental.",
+  },
+  {
+    title: "intermediate applications developer",
+    company: "ups",
+    href: null,
+    current: false,
+    description: "applications development on air, fleet, and freight systems.",
+  },
+  {
+    title: "application developer",
+    company: "ups",
+    href: null,
+    current: false,
+    description:
+      "started here after graduating, writing and shipping internal applications.",
+  },
+  {
+    title: "academic ambassador",
+    company: "seton hall university",
+    href: null,
+    current: false,
+    description:
+      "outreach to high school students interested in computer science.",
+  },
+] as const;
+
 export const facts = [
   "based in new jersey",
-  "applications developer at ups",
-  "computer science, seton hall 2020",
+  "web developer at judi health",
+  "computer science + psychology, seton hall 2020",
   "dsaa 2020 paper on intrusion detection",
 ] as const;
 

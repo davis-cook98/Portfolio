@@ -24,7 +24,7 @@ export function HomeView() {
           davis <DrawablyCircle>cook</DrawablyCircle>
         </h1>
         <p ref={noteRef} className="max-w-md text-lg leading-8 text-muted">
-          applications developer in new jersey. interested in{" "}
+          web developer at judi health. interested in{" "}
           <DrawablyHighlight>data analysis</DrawablyHighlight> and{" "}
           <DrawablyUnderline>machine learning</DrawablyUnderline>.
         </p>
