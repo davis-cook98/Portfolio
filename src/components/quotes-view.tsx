@@ -1,25 +1,31 @@
 "use client";
 
-import { startTransition, useState } from "react";
+import { startTransition, useEffect, useState } from "react";
 import { DrawablyButton, DrawablyCard, DrawablyUnderline } from "drawably/react";
 import { quotes } from "@/lib/site";
 
-function nextIndex(current: number) {
+function pickIndex(exclude?: number) {
   if (quotes.length <= 1) return 0;
 
-  let next = current;
-  while (next === current) {
+  let next = Math.floor(Math.random() * quotes.length);
+  if (exclude === undefined || quotes.length === 1) return next;
+
+  while (next === exclude) {
     next = Math.floor(Math.random() * quotes.length);
   }
   return next;
 }
 
 export function QuotesView() {
-  const [index, setIndex] = useState(() =>
-    Math.floor(Math.random() * quotes.length),
-  );
+  const [index, setIndex] = useState(0);
   const [drawKey, setDrawKey] = useState(0);
   const quote = quotes[index] ?? quotes[0];
+
+  useEffect(() => {
+    startTransition(() => {
+      setIndex(pickIndex());
+    });
+  }, []);
 
   return (
     <div className="flex flex-col gap-8 py-4 lg:gap-10">
@@ -49,7 +55,7 @@ export function QuotesView() {
           variant="outline"
           onClick={() => {
             startTransition(() => {
-              setIndex((current) => nextIndex(current));
+              setIndex((current) => pickIndex(current));
               setDrawKey((key) => key + 1);
             });
           }}
