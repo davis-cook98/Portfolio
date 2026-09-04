@@ -5,13 +5,12 @@ import { DrawablyButton, DrawablyCard, DrawablyUnderline } from "drawably/react"
 import { quotes } from "@/lib/site";
 
 function pickIndex(exclude?: number) {
-  if (quotes.length <= 1) return 0;
-
-  let next = Math.floor(Math.random() * quotes.length);
-  if (exclude === undefined || quotes.length === 1) return next;
+  const count = quotes.length;
+  let next = Math.floor(Math.random() * count);
+  if (exclude === undefined || count < 2) return next;
 
   while (next === exclude) {
-    next = Math.floor(Math.random() * quotes.length);
+    next = Math.floor(Math.random() * count);
   }
   return next;
 }
