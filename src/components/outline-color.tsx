@@ -117,6 +117,7 @@ export function OutlineColorPicker() {
   return (
     <div ref={rootRef} className="relative inline-flex">
       <DrawablyButton
+        key={open ? "ink-open" : "ink-closed"}
         variant={open ? "solid" : "outline"}
         aria-label="pick outline color"
         aria-expanded={open}
