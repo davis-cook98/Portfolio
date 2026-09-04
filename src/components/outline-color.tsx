@@ -117,10 +117,15 @@ export function OutlineColorPicker() {
   return (
     <div ref={rootRef} className="relative inline-flex">
       <DrawablyButton
+        key={open ? "ink-open" : "ink-closed"}
         variant={open ? "solid" : "outline"}
         aria-label="pick outline color"
         aria-expanded={open}
         aria-controls={panelId}
+        // Keep the label on page text colors, not the selected pen. Drawably
+        // buttons default to --drawably-ink for text, which becomes unreadable
+        // once the pen changes (and on solid fills that match dark ink).
+        style={{ color: open ? "var(--paper)" : "var(--ink)" }}
         onClick={() => setOpen((value) => !value)}
       >
         <span className="flex items-center gap-2 font-mono text-sm">

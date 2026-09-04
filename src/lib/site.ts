@@ -111,23 +111,6 @@ export const projects = [
   },
 ] as const;
 
-export const quotes = [
-  {
-    text: "simplicity is the ultimate sophistication.",
-    author: "leonardo da vinci",
-  },
-  {
-    text: "i intend to live life, not just exist.",
-    author: "george takei",
-  },
-  {
-    text: "in the middle of every difficulty lies opportunity.",
-    author: "albert einstein",
-  },
-  {
-    text: "design is not just what it looks like and feels like. design is how it works.",
-    author: "steve jobs",
-  },
-] as const;
+export { quotes } from "./quotes";
 
 export type ProjectStatus = (typeof projects)[number]["status"];
