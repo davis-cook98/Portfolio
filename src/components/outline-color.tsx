@@ -121,6 +121,9 @@ export function OutlineColorPicker() {
         aria-label="pick outline color"
         aria-expanded={open}
         aria-controls={panelId}
+        // Outline label uses page ink, not the selected pen — otherwise the
+        // word "ink" becomes the stroke color and can vanish into the sketch.
+        style={open ? undefined : { color: "var(--ink)" }}
         onClick={() => setOpen((value) => !value)}
       >
         <span className="flex items-center gap-2 font-mono text-sm">

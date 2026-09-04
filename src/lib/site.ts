@@ -111,55 +111,6 @@ export const projects = [
   },
 ] as const;
 
-export const quotes = [
-  {
-    text: "simplicity is the ultimate sophistication.",
-    author: "leonardo da vinci",
-  },
-  {
-    text: "i intend to live life, not just exist.",
-    author: "george takei",
-  },
-  {
-    text: "in the middle of every difficulty lies opportunity.",
-    author: "albert einstein",
-  },
-  {
-    text: "design is not just what it looks like and feels like. design is how it works.",
-    author: "steve jobs",
-  },
-  {
-    text: "the best way to predict the future is to invent it.",
-    author: "alan kay",
-  },
-  {
-    text: "perfection is achieved not when there is nothing more to add, but when there is nothing left to take away.",
-    author: "antoine de saint-exupéry",
-  },
-  {
-    text: "programs must be written for people to read, and only incidentally for machines to execute.",
-    author: "harold abelson",
-  },
-  {
-    text: "the details are not the details. they make the design.",
-    author: "charles eames",
-  },
-  {
-    text: "good design is as little design as possible.",
-    author: "dieter rams",
-  },
-  {
-    text: "not everything that can be counted counts, and not everything that counts can be counted.",
-    author: "william bruce cameron",
-  },
-  {
-    text: "we shape our tools and thereafter our tools shape us.",
-    author: "john culkin",
-  },
-  {
-    text: "life is trying things to see if they work.",
-    author: "ray bradbury",
-  },
-] as const;
+export { quotes } from "./quotes";
 
 export type ProjectStatus = (typeof projects)[number]["status"];
